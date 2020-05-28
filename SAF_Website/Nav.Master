@@ -1,0 +1,96 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Nav.master.cs" Inherits="SAF_Website.Nav" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>SAF</title>
+
+  <!-- Bootstrap core CSS -->
+    <link href="Style/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="Contents/fa/all.css" rel="stylesheet">
+    <link href="Contents/Css/Search.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+
+</head>
+
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <!-- Navigation -->
+            <nav class="navbar navbar-expand-lg navbar-dark static-top">
+                <img class="d-inline-block align-top" src="PL/Img/Capture1.PNG" height="80" width="80" />
+               
+                <a class="navbar-brand" href="SearchParticipant.aspx">
+                    <h6>SAF<p style="font-size: 11px;font-family: Raleway; color:#bdc8d1;">
+                        Risk Assessment<br />
+                        Checklist Portal
+                        </p>
+                    </h6>
+                </a>
+                <div class="container">
+                    <!-- Logo with the title -->
+
+                    <!-- when the screen resize the navigation icon -->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <!-- container for the nav items -->
+                    <div class="container">
+                        <div class="collapse navbar-collapse  " id="navbarResponsive">
+                            <div class="col-sm-2">
+                            </div>
+                            <div class="col-sm-10">
+
+                                <ul class="navbar-nav mx-auto ">
+                                    <div class="col-sm-4">
+                                        <li class="nav-item ">
+                                            <asp:HyperLink ID="LinkSearch" runat="server" CssClass="nav-link" NavigateUrl="/SearchParticipant.aspx" Visible="false">  <i class="fas fa-user-friends">&nbsp&nbspSearch Participants</i></asp:HyperLink>
+                                        </li>
+                                    </div>
+
+                                    <div class="col-sm-4">
+                                        <li class="nav-item ">
+                                            <asp:HyperLink ID="LinkManage" runat="server" CssClass="nav-link" NavigateUrl="/ManageChecklists.aspx" Visible="false"><i class="fas fa-list-ul"></i>&nbsp&nbspManage Checklists</asp:HyperLink>
+                                        </li>
+                                    </div>
+
+                                    <div class="col-sm-4">
+                                        <li class="nav-item dropdown ">
+
+                                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"><i class="fas fa-user-alt"></i>&nbsp&nbsp<asp:Label ID="LabelUser" runat="server" Text="User"></asp:Label></a>
+                                            <div runat="server" class="dropdown-menu">
+                                                <asp:HyperLink ID="LinkLogin" runat="server" CssClass="dropdown-item" NavigateUrl="/Login.aspx">Sign In</asp:HyperLink>
+                                                <asp:HyperLink ID="LinkLogout" runat="server" CssClass="dropdown-item" NavigateUrl="/Login.aspx" Visible="false">Sign Out</asp:HyperLink>
+                                            </div>
+
+                                        </li>
+                                    </div>
+
+                                    
+                                </ul>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </nav>
+
+
+            <!-- Bootstrap core JavaScript -->
+            <script src="Style/jquery/jquery.slim.min.js"></script>
+            <script src="Style/bootstrap/js/bootstrap.bundle.min.js"></script>
+            <asp:ContentPlaceHolder ID="container" runat="server"></asp:ContentPlaceHolder>
+
+        </div>
+    </form>
+</body>
+</html>

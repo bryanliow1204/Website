@@ -1,0 +1,149 @@
+﻿#form-control {
+
+}
+body {
+    background-color: #eaeaea;
+}
+
+.form-control {
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    -moz-border-radius-bottomright: 15px;
+    -moz-border-radius-bottomleft: 15px;
+    -webkit-border-bottom-right-radius: 15px;
+    -webkit-border-bottom-left-radius: 15px;
+    -moz-border-radius-topright: 15px;
+    -moz-border-radius-topleft: 15px;
+    -webkit-border-top-right-radius: 15px;
+    -webkit-border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+.navbar {
+    background-color: #113958;
+}
+/* change the link color */
+.navbar-nav .nav-item .nav-link {
+    color: #008ea8;
+    font-family: Roboto Condensed !important;
+}
+/* change the color of active or hovered links */
+.nav-item.active .nav-link,
+.navbar-nav .nav-item:focus .nav-link,
+.navbar-nav .nav-item:hover .nav-link {
+    color: white;
+    font-family: Roboto Condensed !important;
+}
+
+.col-sm-8 {
+    width: 100%;
+    margin: 0 auto;
+}
+
+table {
+    border: 1px solid #ddd;
+    border-collapse: separate;
+    border-left: 0;
+    border-radius: 9px;
+    border-spacing: 0px;
+}
+
+
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+    border-collapse: separate;
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+th, td {
+    padding: 5px 4px 6px 4px;
+    text-align: left;
+    vertical-align: top;
+}
+
+td {
+    border-top: 1px solid #ddd;
+}
+
+thead:first-child tr:first-child th:first-child, tbody:first-child tr:first-child td:first-child {
+    border-radius: 9px 0 0 0;
+}
+
+thead:first-child tr:first-child th:last-child, tbody:first-child tr:last-child td:last-child {
+    border-radius: 0 9px 0 0;
+}
+
+thead:last-child tr:last-child th:first-child, tbody:last-child tr:last-child td:first-child {
+    border-radius: 0 0 0 0;
+}
+
+input[type="date"] {
+    position: relative;
+}
+
+    /* create a new arrow, because we are going to mess up the native one
+see "List of symbols" below if you want another, you could also try to add a font-awesome icon.. */
+    input[type="Date"]:after {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f073";
+        color: #555;
+        padding: 0 5px;
+    }
+
+    /* change color of symbol on hover */
+    input[type="Date"]:hover:after {
+        color: #bf1400;
+    }
+
+    /* make the native arrow invisible and stretch it over the whole field so you can click anywhere in the input field to trigger the native datepicker*/
+    input[type="Date"]::-webkit-calendar-picker-indicator {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: auto;
+        height: auto;
+        color: transparent;
+        background: transparent;
+    }
+
+    /* adjust increase/decrease button */
+    input[type="Date"]::-webkit-inner-spin-button {
+        z-index: 1;
+    }
+
+    /* adjust clear button */
+    input[type="Date"]::-webkit-clear-button {
+        z-index: 1;
+    }
+
+
+
+th.sortasc a {
+    display: block;
+    padding: 0 4px 0 15px;
+    background: url("Images/asc.png") no-repeat;
+}
+
+th.sortdesc a {
+    display: block;
+    padding: 0 4px 0 15px;
+    background: url("Images/desc.png") no-repeat;
+}
+
+.imgg {
+    font-family: FontAwesome;
+    filter: grayscale(100%);
+    filter: brightness(100);
+}
+
